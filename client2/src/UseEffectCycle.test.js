@@ -7,9 +7,7 @@ import UseEffectCycle from './components/UseEffectCycle'
 afterEach(cleanup);
 
 it('fetches posts', async () => {
-
-    const { getByTestId, getByText } = render(<UseEffectCycle />);
-
+    
     const res = await fetchPosts();
     expect(res.data[0]).toEqual({ body: 'lorem', id: 1, title: 'ipsum' });
 });
